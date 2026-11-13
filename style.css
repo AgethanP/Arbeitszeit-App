@@ -1,27 +1,710 @@
-:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#132039;background:#f4f7fb;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #96b9ff;outline-offset:2px}.app{max-width:670px;margin:auto;min-height:100dvh;padding:24px 16px 105px}.eyebrow{font-size:.71rem;font-weight:800;letter-spacing:.12em;color:#6b7d97;text-transform:uppercase}h1{font-size:1.65rem;margin:6px 0 20px;letter-spacing:-.045em}h2{font-size:1.05rem;margin:0 0 12px}.muted{color:#65758d}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.settings-btn,.square{border:1px solid #dce5f0;background:white;border-radius:14px;min-width:43px;height:43px;font-size:1.25rem;color:#283c59}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}.stat,.panel{background:white;border:1px solid #e5ebf3;box-shadow:0 6px 25px rgba(22,43,73,.035);border-radius:19px}.stat{padding:16px}.stat small{display:block;color:#687b92;font-size:.77rem;min-height:2.3em}.stat strong{display:block;font-size:1.6rem;letter-spacing:-.04em;margin-top:6px}.panel{padding:17px;margin-bottom:16px}.calendar-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:19px;gap:6px}.calendar-head strong{font-size:1.02rem;text-align:center}.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}.weekday{text-align:center;font-size:.72rem;color:#8695aa;font-weight:800;padding:4px 0 8px}.day{min-height:58px;padding:8px 2px;border:1px solid transparent;background:#f7f9fc;border-radius:13px;color:#23344f;display:flex;flex-direction:column;align-items:center;gap:6px}.day:disabled{background:transparent;cursor:default}.day.today{border-color:#b3cafa}.day.selected{background:#e9f0ff;border-color:#4778d6}.day-number{font-size:.91rem;font-weight:650}.dot-row{display:flex;gap:3px;justify-content:center}.dot{width:6px;height:6px;border-radius:50%}.dot.done{background:#2aa66b}.dot.planned{background:#4780e8}.legend{display:flex;gap:16px;font-size:.77rem;color:#62758a;margin-top:15px;align-items:center}.legend span{display:flex;align-items:center;gap:6px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.shift-item{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid #edf1f7}.shift-item:first-child{border-top:0}.shift-item strong{font-size:.96rem}.shift-item small{display:block;color:#687a8e;margin-top:4px;line-height:1.5}.status{display:inline-block;border-radius:20px;padding:3px 7px;font-weight:700;font-size:.72rem;margin-left:5px}.status.done{color:#146b42;background:#e6f8ef}.status.planned{color:#225ebc;background:#e8f0ff}.mini{background:none;border:0;color:#2e66c5;font-size:.82rem;font-weight:750;padding:4px}.primary{background:#326bd1;color:white;border:none;border-radius:13px;padding:13px 16px;font-weight:760}.primary.wide{width:100%}.secondary{background:#ecf2fb;border:0;color:#2858ad;border-radius:13px;padding:12px 15px;font-weight:740}.danger{background:#fff0f0;color:#b32929;border:0;border-radius:13px;padding:12px 15px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.empty{padding:15px 0;color:#7988a1;line-height:1.5}.tabs{position:fixed;bottom:0;left:0;right:0;z-index:5;background:rgba(255,255,255,.97);border-top:1px solid #e3ebf4;padding:11px max(16px,calc((100% - 670px)/2 + 16px)) calc(12px + env(safe-area-inset-bottom));display:flex;justify-content:space-around;gap:6px;backdrop-filter:blur(12px)}.tab{flex:1;border:0;background:transparent;color:#8290a3;border-radius:12px;padding:9px 4px;font-size:.78rem;font-weight:750}.tab.active{background:#eaf0fc;color:#2d64c5}.screen[hidden],dialog[hidden]{display:none}.hint{font-size:.85rem;color:#64758c;line-height:1.55}.form-grid{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:6px}label{display:block;font-size:.82rem;font-weight:750;color:#334660;margin-bottom:5px}.field{margin-bottom:14px}input,select{width:100%;background:white;border:1px solid #d4deec;border-radius:11px;padding: 8px 6px;color:#172844;min-width:0}dialog{border:0;border-radius:20px;box-shadow:0 20px 90px #162a4755;width:min(100% - 24px,530px);max-height:min(90dvh,760px);overflow-y:auto;padding:22px}dialog::backdrop{background:#14223b99}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:15px}.modal-head h2{margin:0}.note{border-radius:12px;background:#eef4ff;padding:12px;font-size:.84rem;line-height:1.5;color:#385578}.rule{display:grid;grid-template-columns:1fr 1fr .85fr;gap:8px;align-items:end;margin:12px 0}.rule input{padding:10px 6px;font-size:.87rem}.rule label{font-size:.75rem}.rule-title{display:flex;align-items:center;justify-content:space-between;font-weight:800;margin-top:18px}.notice{font-size:.82rem;color:#62758c;line-height:1.5}.preview{font-size:.82rem;color:#385578;padding:10px 12px;background:#eef4ff;border-radius:12px;margin:10px 0}.footer-note{font-size:.75rem;color:#8290a3;line-height:1.5;margin-top:24px}#toast{position:fixed;bottom:86px;left:50%;transform:translateX(-50%);background:#172842;color:white;padding:11px 16px;border-radius:12px;display:none;z-index:20;font-size:.85rem;max-width:90vw}#toast.show{display:block}@media(max-width:350px){.app{padding-left:10px;padding-right:10px}.day{min-height:50px}.panel{padding:12px}.stat{padding:12px}.stat strong{font-size:1.3rem}}@media(min-width:700px){.app{padding-top:42px}}
 
-/* Abrechnungsarchiv */
-.document-item{display:flex;gap:11px;align-items:flex-start;border-top:1px solid #edf1f7;padding:14px 0}
-.document-item:first-child{border-top:0}.document-icon{display:grid;place-items:center;flex-shrink:0;width:42px;height:45px;background:#eaf0fc;color:#315fb2;border-radius:12px;font-size:1.35rem}
-.document-details{flex:1;min-width:0}.document-details strong{display:block;overflow-wrap:anywhere;font-size:.9rem}
-.document-details small{display:block;color:#697c92;margin-top:5px;font-size:.76rem}
-.document-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.document-actions button{font-size:.78rem}
-.doc-section{font-size:.8rem;font-weight:800;color:#76879e;text-transform:uppercase;margin:18px 0 7px}
-#documentForm .primary{margin-top:8px}
+/* =========================================
+   MEINE ARBEITSZEIT
+   Version 3.3 – iPhone 13 optimiert
+   ========================================= */
 
+/* Grunddesign */
 
-/* ==========================================
-   iPhone 13 – Kompaktes Smartphone-Layout
-   ========================================== */
+:root {
+  font-family: Inter, ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
+  color: #132039;
+  background: #f4f7fb;
+  font-synthesis: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #96b9ff;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+/* =========================================
+   HAUPTBEREICH
+   ========================================= */
+
+.app {
+  max-width: 670px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  padding: 24px 16px 105px;
+}
+
+.eyebrow {
+  font-size: 0.71rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #6b7d97;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 1.65rem;
+  margin: 6px 0 20px;
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  font-size: 1.05rem;
+  margin: 0 0 12px;
+}
+
+.muted {
+  color: #65758d;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.settings-btn,
+.square {
+  border: 1px solid #dce5f0;
+  background: white;
+  border-radius: 14px;
+  min-width: 43px;
+  height: 43px;
+  font-size: 1.25rem;
+  color: #283c59;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   STUNDENÜBERSICHT
+   ========================================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stat,
+.panel {
+  background: white;
+  border: 1px solid #e5ebf3;
+  box-shadow: 0 6px 25px rgba(22, 43, 73, 0.035);
+  border-radius: 19px;
+  min-width: 0;
+}
+
+.stat {
+  padding: 16px;
+}
+
+.stat small {
+  display: block;
+  color: #687b92;
+  font-size: 0.77rem;
+  min-height: 2.3em;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.6rem;
+  letter-spacing: -0.04em;
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+}
+
+.panel {
+  padding: 17px;
+  margin-bottom: 16px;
+}
+
+/* =========================================
+   KALENDER
+   ========================================= */
+
+.calendar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+  gap: 6px;
+}
+
+.calendar-head strong {
+  font-size: 1.02rem;
+  text-align: center;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 0.72rem;
+  color: #8695aa;
+  font-weight: 800;
+  padding: 4px 0 8px;
+}
+
+.day {
+  min-width: 0;
+  min-height: 58px;
+  padding: 8px 2px;
+  border: 1px solid transparent;
+  background: #f7f9fc;
+  border-radius: 13px;
+  color: #23344f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.day:disabled {
+  background: transparent;
+  cursor: default;
+}
+
+.day.today {
+  border-color: #b3cafa;
+}
+
+.day.selected {
+  background: #e9f0ff;
+  border-color: #4778d6;
+}
+
+.day-number {
+  font-size: 0.91rem;
+  font-weight: 650;
+}
+
+.dot-row {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dot.done {
+  background: #2aa66b;
+}
+
+.dot.planned {
+  background: #4780e8;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  font-size: 0.77rem;
+  color: #62758a;
+  margin-top: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =========================================
+   SCHICHTÜBERSICHT
+   ========================================= */
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.shift-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #edf1f7;
+}
+
+.shift-item:first-child {
+  border-top: 0;
+}
+
+.shift-item strong {
+  font-size: 0.96rem;
+}
+
+.shift-item small {
+  display: block;
+  color: #687a8e;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.status {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 3px 7px;
+  font-weight: 700;
+  font-size: 0.72rem;
+  margin-left: 5px;
+}
+
+.status.done {
+  color: #146b42;
+  background: #e6f8ef;
+}
+
+.status.planned {
+  color: #225ebc;
+  background: #e8f0ff;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.mini {
+  background: none;
+  border: 0;
+  color: #2e66c5;
+  font-size: 0.82rem;
+  font-weight: 750;
+  padding: 4px;
+}
+
+.primary {
+  background: #326bd1;
+  color: white;
+  border: none;
+  border-radius: 13px;
+  padding: 13px 16px;
+  font-weight: 760;
+}
+
+.primary.wide {
+  width: 100%;
+}
+
+.secondary {
+  background: #ecf2fb;
+  border: 0;
+  color: #2858ad;
+  border-radius: 13px;
+  padding: 12px 15px;
+  font-weight: 740;
+}
+
+.danger {
+  background: #fff0f0;
+  color: #b32929;
+  border: 0;
+  border-radius: 13px;
+  padding: 12px 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.empty {
+  padding: 15px 0;
+  color: #7988a1;
+  line-height: 1.5;
+}
+
+/* =========================================
+   UNTERE NAVIGATION
+   ========================================= */
+
+.tabs {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 1px solid #e3ebf4;
+
+  padding: 11px
+    max(16px, calc((100% - 670px) / 2 + 16px))
+    calc(12px + env(safe-area-inset-bottom));
+
+  display: flex;
+  justify-content: space-around;
+  gap: 6px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.tab {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: #8290a3;
+  border-radius: 12px;
+  padding: 9px 4px;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.tab.active {
+  background: #eaf0fc;
+  color: #2d64c5;
+}
+
+.screen[hidden],
+dialog[hidden] {
+  display: none;
+}
+
+/* =========================================
+   FORMULARE
+   ========================================= */
+
+.hint {
+  font-size: 0.85rem;
+  color: #64758c;
+  line-height: 1.55;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Verhindert, dass Inhalte die Spalten dehnen */
+.form-grid > *,
+.rule > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 750;
+  color: #334660;
+  margin-bottom: 6px;
+}
+
+.field {
+  min-width: 0;
+  margin-bottom: 14px;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  background: white;
+  border: 1px solid #d4deec;
+  border-radius: 11px;
+  padding: 12px;
+  color: #172844;
+  box-sizing: border-box;
+}
+
+/* iPhone: Uhrzeit- und Datumsfelder
+   dürfen ihre Grid-Spalte nicht vergrößern */
+input[type="time"],
+input[type="date"] {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  text-align: left;
+}
+
+input[type="time"]::-webkit-date-and-time-value,
+input[type="date"]::-webkit-date-and-time-value {
+  min-width: 0;
+  text-align: left;
+}
+
+input[type="time"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit {
+  min-width: 0;
+  padding: 0;
+}
+
+/* =========================================
+   DIALOGFENSTER
+   ========================================= */
+
+dialog {
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 20px 90px #162a4755;
+
+  width: min(calc(100% - 24px), 530px);
+  max-width: 530px;
+  max-height: min(90dvh, 760px);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+dialog::backdrop {
+  background: #14223b99;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.modal-head h2 {
+  margin: 0;
+  min-width: 0;
+}
+
+/* =========================================
+   EINSTELLUNGEN / ZUSCHLÄGE
+   ========================================= */
+
+.note {
+  border-radius: 12px;
+  background: #eef4ff;
+  padding: 12px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #385578;
+}
+
+.rule-block {
+  min-width: 0;
+  border-bottom: 1px solid #edf1f7;
+  padding-bottom: 14px;
+}
+
+.rule {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(0, 0.85fr);
+  gap: 10px;
+  align-items: end;
+  margin: 12px 0;
+}
+
+.rule input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 8px;
+  font-size: 16px;
+}
+
+.rule label {
+  font-size: 0.75rem;
+}
+
+.rule-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: 800;
+  margin-top: 18px;
+}
+
+.rule-name {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.notice {
+  font-size: 0.82rem;
+  color: #62758c;
+  line-height: 1.5;
+}
+
+.preview {
+  font-size: 0.82rem;
+  color: #385578;
+  padding: 10px 12px;
+  background: #eef4ff;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+
+.footer-note {
+  font-size: 0.75rem;
+  color: #8290a3;
+  line-height: 1.5;
+  margin-top: 24px;
+}
+
+/* =========================================
+   BENACHRICHTIGUNGEN
+   ========================================= */
+
+#toast {
+  position: fixed;
+  bottom: 86px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #172842;
+  color: white;
+  padding: 11px 16px;
+  border-radius: 12px;
+
+  display: none;
+  z-index: 20;
+  font-size: 0.85rem;
+  max-width: 90vw;
+}
+
+#toast.show {
+  display: block;
+}
+
+/* =========================================
+   ABRECHNUNGSARCHIV
+   ========================================= */
+
+.document-item {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  border-top: 1px solid #edf1f7;
+  padding: 14px 0;
+}
+
+.document-item:first-child {
+  border-top: 0;
+}
+
+.document-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 45px;
+
+  background: #eaf0fc;
+  color: #315fb2;
+  border-radius: 12px;
+  font-size: 1.35rem;
+}
+
+.document-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.document-details strong {
+  display: block;
+  overflow-wrap: anywhere;
+  font-size: 0.9rem;
+}
+
+.document-details small {
+  display: block;
+  color: #697c92;
+  margin-top: 5px;
+  font-size: 0.76rem;
+}
+
+.document-actions {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-top: 9px;
+}
+
+.document-actions button {
+  font-size: 0.78rem;
+}
+
+.doc-section {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #76879e;
+  text-transform: uppercase;
+  margin: 18px 0 7px;
+}
+
+#documentForm .primary {
+  margin-top: 8px;
+}
+
+/* =========================================
+   iPHONE 13 UND KLEINERE SMARTPHONES
+   ========================================= */
 
 @media (max-width: 430px) {
 
-  /* Hauptbereich */
   .app {
-    padding: 16px 12px 90px;
+    padding: 16px 12px
+      calc(90px + env(safe-area-inset-bottom));
   }
 
-  /* Überschrift */
   h1 {
     font-size: 1.4rem;
     margin: 5px 0 14px;
@@ -36,9 +719,10 @@
     font-size: 0.65rem;
   }
 
-  /* Statistik-Karten */
+  /* Statistik */
+
   .stats {
-    gap: 8px;
+    gap: 9px;
     margin-bottom: 12px;
   }
 
@@ -48,7 +732,7 @@
   }
 
   .stat small {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     min-height: 2em;
   }
 
@@ -57,20 +741,20 @@
     margin-top: 4px;
   }
 
-  /* Allgemeine Karten */
   .panel {
-    padding: 12px;
+    padding: 13px;
     border-radius: 15px;
     margin-bottom: 12px;
   }
 
   /* Kalender */
+
   .calendar-head {
     margin-bottom: 12px;
   }
 
   .calendar-head strong {
-    font-size: 0.95rem;
+    font-size: 0.94rem;
   }
 
   .days {
@@ -83,14 +767,14 @@
   }
 
   .day {
-    min-height: 45px;
+    min-height: 46px;
     padding: 5px 2px;
     gap: 4px;
     border-radius: 9px;
   }
 
   .day-number {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
   }
 
   .dot {
@@ -103,12 +787,13 @@
   }
 
   .legend {
-    margin-top: 10px;
+    margin-top: 11px;
     gap: 12px;
-    font-size: 0.7rem;
+    font-size: 0.72rem;
   }
 
-  /* Schichtübersicht */
+  /* Schichten */
+
   .shift-item {
     padding: 10px 0;
     gap: 8px;
@@ -128,10 +813,11 @@
   }
 
   /* Buttons */
+
   .primary,
   .secondary,
   .danger {
-    padding: 10px 12px;
+    padding: 11px 12px;
     border-radius: 10px;
     font-size: 0.85rem;
   }
@@ -143,73 +829,185 @@
     border-radius: 11px;
   }
 
-  /* Eingabefelder */
-  input,
-  select {
-    padding: 10px;
+  /* Dialoge auf dem iPhone */
+
+  dialog {
+    width: calc(100% - 24px);
+    max-width: 390px;
+    max-height: 88dvh;
+    padding: 16px;
+    border-radius: 17px;
+  }
+
+  .modal-head {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .modal-head h2 {
+    font-size: 1.05rem;
+    overflow-wrap: anywhere;
+  }
+
+  /* Beginn und Ende nebeneinander */
+
+  .form-grid {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+    column-gap: 14px;
+    row-gap: 6px;
+    width: 100%;
+  }
+
+  .form-grid .field {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Genug Raum für die iPhone-Uhrzeit */
+
+  #shiftStart,
+  #shiftEnd {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 44px;
+    padding: 8px 6px;
+    font-size: 16px;
+  }
+
+  /* Alle anderen Eingaben */
+
+  dialog input,
+  dialog select {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: 10px 9px;
     font-size: 16px;
   }
 
   .field {
-    margin-bottom: 11px;
-  }
-
-  .form-grid {
-    gap: 9px;
+    margin-bottom: 12px;
   }
 
   label {
     font-size: 0.78rem;
+    margin-bottom: 6px;
   }
 
-  /* Dialogfenster */
-  dialog {
-    width: calc(100% - 20px);
-    padding: 15px;
-    border-radius: 16px;
-    max-height: 88dvh;
-  }
-
-  .modal-head {
-    margin-bottom: 12px;
-  }
+  /* Zuschlagsregeln:
+     Von und Bis nebeneinander,
+     Prozent mit eigener Zeile */
 
   .rule {
-  display: grid;
-  grid-template-columns: 1fr 1fr 0.7fr;
-  gap: 5px;
-  align-items: end;
-  margin: 12px 0;
-   }
-   
-   .rule input {
-     width: 100%;
-     min-width: 0;
-     padding: 8px 4px;
-     font-size: 16px;
-   }
-
-  .rule label {
-    font-size: 0.7rem;
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+    gap: 10px 14px;
+    width: 100%;
+    align-items: end;
+    margin: 12px 0;
   }
 
-  /* Untere Navigation */
+  .rule > div {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .rule > div:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .rule input {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 8px 6px;
+    font-size: 16px;
+  }
+
+  .rule label {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .rule-title {
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .rule-name {
+    flex: 1;
+    min-width: 0;
+    padding: 9px 8px;
+  }
+
+  .rule-title .mini {
+    flex-shrink: 0;
+  }
+
+  /* Hinweise */
+
+  .note {
+    padding: 10px;
+    font-size: 0.78rem;
+  }
+
+  .preview {
+    padding: 10px;
+    font-size: 0.78rem;
+  }
+
+  .notice,
+  .hint {
+    font-size: 0.79rem;
+  }
+
+  .note,
+  .preview,
+  .notice {
+    overflow-wrap: anywhere;
+  }
+
+  /* Formularbuttons */
+
+  dialog .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  dialog .actions button {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Navigation unten */
+
   .tabs {
-    padding: 7px 10px
+    padding: 8px 10px
       calc(8px + env(safe-area-inset-bottom));
     gap: 4px;
   }
 
   .tab {
-    padding: 8px 3px;
+    padding: 9px 3px;
     font-size: 0.72rem;
-    border-radius: 9px;
+    border-radius: 10px;
   }
 
-  /* Abrechnungsarchiv */
+  /* Dokumentenarchiv */
+
   .document-item {
-    padding: 10px 0;
-    gap: 8px;
+    padding: 11px 0;
+    gap: 9px;
   }
 
   .document-icon {
@@ -223,39 +1021,63 @@
   }
 
   .document-actions {
-    gap: 5px;
+    gap: 6px;
   }
 
   .document-actions button {
     font-size: 0.75rem;
   }
+}
 
-   
-/* iPhone 13 – Kompakte Felder nebeneinander */
+/* =========================================
+   BESONDERS SCHMALE SMARTPHONES
+   ========================================= */
 
-@media (max-width: 430px) {
+@media (max-width: 350px) {
 
-  .form-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
+  .app {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
-  .rule {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.7fr);
-    gap: 5px;
+  .panel,
+  .stat {
+    padding: 11px;
   }
 
-  dialog input,
-  dialog select {
-    min-width: 0;
-    width: 100%;
-    padding: 8px 5px;
-    font-size: 16px;
+  .stat strong {
+    font-size: 1.25rem;
+  }
+
+  .day {
+    min-height: 43px;
   }
 
   dialog {
+    width: calc(100% - 16px);
     padding: 12px;
+  }
+
+  .form-grid,
+  .rule {
+    column-gap: 8px;
+  }
+
+  #shiftStart,
+  #shiftEnd,
+  .rule input {
+    padding-left: 4px;
+    padding-right: 4px;
   }
 }
 
+/* =========================================
+   GRÖSSERE BILDSCHIRME
+   ========================================= */
+
+@media (min-width: 700px) {
+
+  .app {
+    padding-top: 42px;
+  }
 }
