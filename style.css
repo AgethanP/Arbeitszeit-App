@@ -1081,3 +1081,115 @@ dialog::backdrop {
     padding-top: 42px;
   }
 }
+
+/* ==========================================
+   KOMPAKTE UHRZEITAUSWAHL – iPhone
+   ========================================== */
+
+/* Native Uhrzeitfelder ausblenden */
+
+input.time-picker-source,
+input.time-picker-source[hidden] {
+  display: none !important;
+}
+
+/* Stunden und Minuten nebeneinander */
+
+.compact-time-picker {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+  gap: 5px;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Auswahlfelder */
+
+.compact-time-picker select {
+  appearance: none;
+  -webkit-appearance: none;
+
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  height: 44px;
+  padding: 0 3px;
+
+  border: 1px solid #d4deec;
+  border-radius: 10px;
+
+  background: #f7f9fc;
+  color: #172844;
+
+  font-size: 16px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  text-align-last: center;
+}
+
+/* Ausgewähltes Feld hervorheben */
+
+.compact-time-picker select:focus {
+  outline: 2px solid #4778d6;
+  outline-offset: 1px;
+  background: #ffffff;
+}
+
+/* iPhone-Optimierung */
+
+@media (max-width: 430px) {
+
+  /* Beginn und Ende nebeneinander */
+
+  .form-grid {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+    column-gap: 12px;
+    row-gap: 8px;
+  }
+
+  .form-grid > .field {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Kompakte Zeitauswahl */
+
+  .compact-time-picker {
+    gap: 4px;
+  }
+
+  .compact-time-picker select {
+    height: 42px;
+    padding: 0 2px;
+    font-size: 16px;
+    border-radius: 9px;
+  }
+
+  /* Zuschlagseinstellungen */
+
+  .rule {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+    column-gap: 12px;
+    row-gap: 10px;
+  }
+
+  /* Prozentfeld bekommt eigene Zeile */
+
+  .rule > div:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+
