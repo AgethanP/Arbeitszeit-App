@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <title>Meine Arbeitszeit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+<main class="app">
+  <header class="top"><div><div class="eyebrow">Persönliches Stundenbuch</div><h1>Meine Arbeitszeit</h1></div><button class="settings-btn" id="settingsButton" aria-label="Einstellungen" title="Einstellungen">⚙</button></header>
+  <section class="screen" id="timeScreen">
+    <div class="stats"><div class="stat"><small>Geleistet im Monat</small><strong id="doneTotal">0,0 h</strong></div><div class="stat"><small>Noch geplant im Monat</small><strong id="plannedTotal">0,0 h</strong></div></div>
+    <section class="panel" aria-label="Monatskalender"><div class="calendar-head"><button class="square" id="previousMonth" aria-label="Vorheriger Monat">‹</button><strong id="monthLabel"></strong><button class="square" id="nextMonth" aria-label="Nächster Monat">›</button></div><div class="days" id="calendar"></div><div class="legend"><span><i class="dot done"></i> Geleistet</span><span><i class="dot planned"></i> Geplant</span></div></section>
+    <section class="panel"><div class="section-head"><h2 id="selectedDayLabel">Schichten</h2><button class="mini" id="addButton">＋ Hinzufügen</button></div><div id="shiftList"></div></section>
+    <p class="footer-note">Deine Einträge werden auf diesem Gerät im Browser gespeichert. Sichere sie regelmäßig über ⚙ → Backup exportieren.</p>
+  </section>
+  <section class="screen" id="docsScreen" hidden>
+    <section class="panel">
+      <div class="section-head"><h2>Meine Abrechnungen</h2><button class="mini" id="addDocument">＋ Hochladen</button></div>
+      <div class="field"><label for="documentMonthFilter">Monat auswählen</label><input type="month" id="documentMonthFilter"></div>
+      <div id="documentList" aria-live="polite"><p class="muted">Archiv wird geladen …</p></div>
+      <p class="notice">PDFs und Fotos liegen nur im Browser dieses Geräts. Sie werden nicht in eine Cloud hochgeladen. Bitte regelmäßig ein vollständiges Backup erstellen und sicher außerhalb des Browsers aufbewahren.</p>
+    </section>
+  </section>
+  <section class="screen" id="payScreen" hidden><div class="stats"><div class="stat"><small>Geleistete Stunden</small><strong id="payHours">0,0 h</strong></div><div class="stat"><small>Geschätzter Bruttolohn</small><strong id="payEstimate">–</strong></div></div><section class="panel"><h2>Lohnübersicht</h2><p class="hint" id="payBreakdown"></p><p class="notice">Schätzung nach deinen hinterlegten Regeln; keine verbindliche Lohnabrechnung. Pausenzeiten werden für die Zuschlagsberechnung vereinfacht am Ende der Schicht abgezogen, sofern ihre tatsächliche Lage nicht dokumentiert ist.</p><button class="secondary" id="paySettings">Stundenlohn und Zuschläge einstellen</button></section></section>
+</main>
+<dialog id="documentDialog"><div class="modal-head"><h2>Abrechnung hinzufügen</h2><button class="square" type="button" id="closeDocument" aria-label="Schließen">×</button></div>
+<form id="documentForm">
+  <div class="field"><label for="documentMonth">Abrechnungsmonat</label><input type="month" id="documentMonth" required></div>
+  <div class="field"><label for="documentFile">PDF oder Foto auswählen (max. 15 MB)</label><input type="file" id="documentFile" accept=".pdf,.png,.jpg,.jpeg,.webp,application/pdf,image/png,image/jpeg,image/webp" required></div>
+  <div class="field"><label for="documentNote">Notiz (optional)</label><input id="documentNote" maxlength="150" placeholder="z. B. November-Abrechnung"></div>
+  <p class="notice">Die Datei wird im lokalen Browserarchiv (IndexedDB) abgelegt. Eine Speicherung auf dem Gerät außerhalb des Browsers erfolgt erst über Download oder Backup.</p>
+  <button class="primary wide" type="submit" id="saveDocument">Dokument speichern</button>
+</form></dialog>
+<nav class="tabs" aria-label="Navigation"><button class="tab active" data-screen="timeScreen">▦ Schichten</button><button class="tab" data-screen="docsScreen">▤ Abrechnungen</button><button class="tab" data-screen="payScreen">€ Lohn</button></nav>
+<dialog id="shiftDialog"><div class="modal-head"><h2 id="formTitle">Schicht hinzufügen</h2><button class="square" id="closeShift" aria-label="Schließen">×</button></div><form id="shiftForm"><div class="field"><label for="shiftDate">Datum</label><input required type="date" id="shiftDate"></div><div class="form-grid"><div class="field"><label for="shiftStart">Beginn</label><input required type="time" id="shiftStart" value="14:00"></div><div class="field"><label for="shiftEnd">Ende</label><input required type="time" id="shiftEnd" value="20:00"></div></div><div class="field"><label for="shiftPause">Pause in Minuten (manuell)</label><input required type="number" min="0" step="1" id="shiftPause" value="0"></div><div class="field"><label for="shiftStatus">Status</label><select id="shiftStatus"><option value="planned">Geplant</option><option value="done">Geleistet</option></select></div><div class="field"><label for="shiftNote">Notiz (optional)</label><input id="shiftNote" maxlength="150" placeholder="z. B. spontan eingesprungen"></div><div id="shiftPreview" class="preview"></div><div class="actions"><button class="primary" type="submit">Schicht speichern</button><button class="danger" id="deleteShift" type="button" hidden>Löschen</button></div></form></dialog>
+<dialog id="settingsDialog"><div class="modal-head"><h2>Einstellungen</h2><button class="square" id="closeSettings" aria-label="Schließen">×</button></div><form id="settingsForm"><div class="field"><label for="hourlyWage">Bruttostundenlohn in € (optional)</label><input id="hourlyWage" type="text" inputmode="decimal" placeholder="z. B. 14,50"></div><div class="note">Zuschläge sind individuell einstellbar. Die angegebenen Zeitfenster gelten täglich; überlappende Zeitfenster können mehrere Zuschläge auslösen.</div><div id="rulesContainer"></div><div class="actions"><button class="secondary" id="addRule" type="button">＋ Zuschlagsregel</button></div><div class="actions"><button class="primary" type="submit">Einstellungen speichern</button></div></form><hr style="border:0;border-top:1px solid #e5ebf2;margin:22px 0"><h2>Datensicherung</h2><p class="notice">Exportiert Arbeitszeiten, Zuschlags-Einstellungen und deine archivierten PDFs/Fotos gemeinsam in einer JSON-Datei. Bewahre sie an einem sicheren Ort auf. Je nach Anzahl der Dokumente kann das Backup groß werden.</p><div class="actions"><button class="secondary" id="exportButton" type="button">Backup exportieren</button><button class="secondary" id="importButton" type="button">Backup importieren</button><input type="file" accept="application/json,.json" id="importFile" hidden></div><p class="notice">Beim Import werden die vorhandenen Einträge und Dokumente durch das Backup ersetzt. Auch ältere Backups aus Version 1 sind importierbar, enthalten aber keine Dokumente.</p></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+<script src="pwa.js"></script>
+</body>
+</html>
