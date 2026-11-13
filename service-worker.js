@@ -1,7 +1,7 @@
 
 "use strict";
 
-const CACHE_NAME = "arbeitszeit-app-v3-1";
+const CACHE_NAME = "arbeitszeit-app-v4";
 
 const APP_FILES = [
   "./",
