@@ -8,3 +8,219 @@
 .document-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.document-actions button{font-size:.78rem}
 .doc-section{font-size:.8rem;font-weight:800;color:#76879e;text-transform:uppercase;margin:18px 0 7px}
 #documentForm .primary{margin-top:8px}
+
+
+/* ==========================================
+   iPhone 13 – Kompaktes Smartphone-Layout
+   ========================================== */
+
+@media (max-width: 430px) {
+
+  /* Hauptbereich */
+  .app {
+    padding: 16px 12px 90px;
+  }
+
+  /* Überschrift */
+  h1 {
+    font-size: 1.4rem;
+    margin: 5px 0 14px;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+  }
+
+  /* Statistik-Karten */
+  .stats {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .stat {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .stat small {
+    font-size: 0.7rem;
+    min-height: 2em;
+  }
+
+  .stat strong {
+    font-size: 1.35rem;
+    margin-top: 4px;
+  }
+
+  /* Allgemeine Karten */
+  .panel {
+    padding: 12px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+  }
+
+  /* Kalender */
+  .calendar-head {
+    margin-bottom: 12px;
+  }
+
+  .calendar-head strong {
+    font-size: 0.95rem;
+  }
+
+  .days {
+    gap: 4px;
+  }
+
+  .weekday {
+    font-size: 0.65rem;
+    padding: 3px 0 6px;
+  }
+
+  .day {
+    min-height: 45px;
+    padding: 5px 2px;
+    gap: 4px;
+    border-radius: 9px;
+  }
+
+  .day-number {
+    font-size: 0.8rem;
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .dot-row {
+    gap: 2px;
+  }
+
+  .legend {
+    margin-top: 10px;
+    gap: 12px;
+    font-size: 0.7rem;
+  }
+
+  /* Schichtübersicht */
+  .shift-item {
+    padding: 10px 0;
+    gap: 8px;
+  }
+
+  .shift-item strong {
+    font-size: 0.88rem;
+  }
+
+  .shift-item small {
+    font-size: 0.75rem;
+  }
+
+  .status {
+    font-size: 0.67rem;
+    padding: 3px 6px;
+  }
+
+  /* Buttons */
+  .primary,
+  .secondary,
+  .danger {
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+  }
+
+  .settings-btn,
+  .square {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 11px;
+  }
+
+  /* Eingabefelder */
+  input,
+  select {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .field {
+    margin-bottom: 11px;
+  }
+
+  .form-grid {
+    gap: 9px;
+  }
+
+  label {
+    font-size: 0.78rem;
+  }
+
+  /* Dialogfenster */
+  dialog {
+    width: calc(100% - 20px);
+    padding: 15px;
+    border-radius: 16px;
+    max-height: 88dvh;
+  }
+
+  .modal-head {
+    margin-bottom: 12px;
+  }
+
+  .rule {
+    gap: 5px;
+  }
+
+  .rule input {
+    padding: 9px 4px;
+    font-size: 16px;
+  }
+
+  .rule label {
+    font-size: 0.7rem;
+  }
+
+  /* Untere Navigation */
+  .tabs {
+    padding: 7px 10px
+      calc(8px + env(safe-area-inset-bottom));
+    gap: 4px;
+  }
+
+  .tab {
+    padding: 8px 3px;
+    font-size: 0.72rem;
+    border-radius: 9px;
+  }
+
+  /* Abrechnungsarchiv */
+  .document-item {
+    padding: 10px 0;
+    gap: 8px;
+  }
+
+  .document-icon {
+    width: 36px;
+    height: 39px;
+    font-size: 1.15rem;
+  }
+
+  .document-details strong {
+    font-size: 0.84rem;
+  }
+
+  .document-actions {
+    gap: 5px;
+  }
+
+  .document-actions button {
+    font-size: 0.75rem;
+  }
+}
